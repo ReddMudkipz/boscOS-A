@@ -1,0 +1,7 @@
+#Ctrl + w
+  "xte 'keydown Control_L' 'key w' 'keyup Control_L'"
+  b:10
+
+#Ctrl + Shift + t
+  "xte 'keydown Control_L' 'keydown Shift_L' 'key t' 'keyup Shift_L' 'keyup Control_L'"
+  b:11

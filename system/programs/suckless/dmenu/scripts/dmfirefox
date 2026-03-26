@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+
+# Options array
+declare -a options=(
+  "default"
+  "Gong Cha"
+)
+
+#Size of arrays
+optionsSize=${#options[@]}
+
+# User prompt
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l $optionsSize -p 'Firefox Profile:')
+
+# Execution
+if [ -z "$choice" ]; then
+   exit
+else
+   firefox -P -no-remote "$choice"
+fi

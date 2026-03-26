@@ -1,0 +1,35 @@
+#! /usr/bin/env bash
+
+# Options array
+declare -a options=(
+  "Option 1"
+  "Option 2"
+  "Option 3"
+)
+
+# Confirm array
+declare -a confirm=(
+  "Yes"
+  "No"
+)
+
+#Size of arrays
+optionsSize=${#options[@]}
+confirmSize=${#confirm[@]}
+
+# User prompt
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l $optionsSize -p 'Title:')
+
+# Execution
+if [ "$choice" == "Option 1" ]; then
+  output 1
+elif [ "$choice" == "Option 2" ]; then
+  output 2
+
+elif [ "$choice" == "Option 3" ]; then
+  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Confirm Option 3?:')
+
+  if [ "$confirm" == "Yes" ]; then
+    output 3
+  fi
+fi

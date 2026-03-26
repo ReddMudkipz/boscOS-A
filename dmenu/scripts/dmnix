@@ -1,0 +1,62 @@
+#! /usr/bin/env bash
+
+# Options array
+declare -a options=(
+  "System rebuild"
+  "User rebuild"
+  "Full rebuild"
+  "TODO Garbage collection"
+  "TODO Update packages"
+)
+
+# Confirm array
+declare -a confirm=(
+  "Yes"
+  "No"
+)
+
+#Size of arrays
+optionsSize=${#options[@]}
+confirmSize=${#confirm[@]}
+
+# User prompt
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l $optionsSize -p 'Nix:')
+
+# Execution
+if [ "$choice" == "System rebuild" ]; then
+  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Confirm SYSTEM rebuild?:')
+
+  if [ "$confirm" == "Yes" ]; then
+    st -e sh -c '
+     bash ~/.dotfiles/scripts/nixrebuild.sh
+     read;'
+  fi
+
+elif [ "$choice" == "User rebuild" ]; then
+  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Confirm USER rebuild?:')
+
+  if [ "$confirm" == "Yes" ]; then
+    st -e sh -c '
+     bash ~/.dotfiles/scripts/homerebuild.sh
+     read;'
+  fi
+
+elif [ "$choice" == "Full rebuild" ]; then
+  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Confirm FULL rebuild?:')
+
+  if [ "$confirm" == "Yes" ]; then
+    st -e sh -c '
+     bash ~/.dotfiles/scripts/nixrebuild.sh
+     bash ~/.dotfiles/scripts/homerebuild.sh
+     printf ">>> Full rebuild: DONE\n";
+     printf "Press any button to EXIT"
+     read;'
+  fi
+
+elif [ "$choice" == "Option 3" ]; then
+  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Confirm Option 3?:')
+
+  if [ "$confirm" == "Yes" ]; then
+    output 3
+  fi
+fi

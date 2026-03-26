@@ -1,0 +1,14 @@
+# Only keep lines that are relevant to you!
+# Lines starting with # are comments
+# Make sure indentation is correct (2 spaces at every indentation level), yaml is very sensitive!
+komga:
+  database:
+    file: ${user.home}/.komga/database.sqlite
+  cors.allowed-origins:
+    - http://localhost:8081
+    - http://localhost:8082
+server:
+  port: 25600
+  servlet:
+    session.timeout: 7d # session timeout, here 7 days
+    context-path: /komga
