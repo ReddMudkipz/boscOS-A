@@ -104,9 +104,9 @@ static const char *emacs[]  = { "emacsclient","-c","-a","''", NULL }; /* opens e
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
 
 // Dmenu
-static const char dmpower[] = "bash $HOME/.dotfiles/system/programs/suckless/dmenu/scripts/dmpower"; /* power options */
-static const char dmnix[] = "bash $HOME/.dotfiles/system/programs/suckless/dmenu/scripts/dmnix"; /* nix commands */
-static const char dmfirefox[] = "bash $HOME/.dotfiles/system/programs/suckless/dmenu/scripts/dmfirefox"; /* select specific firefox profile */
+static const char dmpower[] = "bash $HOME/.dotfiles/dmenu/scripts/dmpower"; /* power options */
+static const char dmnix[] = "bash $HOME/.dotfiles/dmenu/scripts/dmnix"; /* nix commands */
+static const char dmfirefox[] = "bash $HOME/.dotfiles/dmenu/scripts/dmfirefox"; /* select specific firefox profile */
 
 // Media controls
 static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL };            /* mute */
