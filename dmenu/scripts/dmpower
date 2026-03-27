@@ -6,7 +6,6 @@ declare -a options=(
   "Suspend"
   "Shut Down"
   "Restart"
-  "Logout"
 )
 
 # Confirm array
@@ -42,12 +41,5 @@ elif [ "$choice" == "Restart" ]; then
 
   if [ "$confirm" == "Yes" ]; then
     reboot
-  fi
-
-elif [ "$choice" == "Logout" ]; then
-  confirm=$(printf '%s\n' "${confirm[@]}" | dmenu -i -l $confirmSize -p 'Logout?:')
-
-  if [ "$confirm" == "Yes" ]; then
-    killall dwm
   fi
 fi

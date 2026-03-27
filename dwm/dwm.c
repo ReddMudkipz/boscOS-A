@@ -1836,7 +1836,7 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd .dotfiles/system/programs/suckless/dwm; ./autostart.sh &");
+	system("cd .dotfiles/dwm; ./autostart.sh &");
 }
 
 void
