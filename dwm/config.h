@@ -139,6 +139,7 @@ static const Key keys[] = {
   { 0, XF86XK_AudioMute, spawn, {.v = mutecmd } },            /* toggle mute */
   { 0, XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },  /* volume up */
   { 0, XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },    /* volume down */
+  { 0, XF86XK_AudioMicMute, spawn, {.v = miccmd } },    /* volume down */
   { 0, XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },    /* play/pause */
   { 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },         /* next */
   { 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },         /* previous */
