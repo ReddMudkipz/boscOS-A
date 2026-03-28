@@ -8,18 +8,21 @@ sudo pacman -Syy
 yay -S htop xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset
 
 # basic programs
-firefox alacritty dunst emacs stow
+yay -S firefox alacritty dunst emacs stow
 
 # fonts and slock compatibility
-nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir
+yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir
 
 # For doom emacs
 yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-isort python-pipenv python-nose python-pytest
 
 # Populating home directory
 rm ~/.bashrc
+rm ~/.xbindkeysrc
+rm ~/.xinitrc
 cd ~/.dotfiles
 stow .
+rm -rf ~/.config/dunst
 stow dunst
 
     # Compiling suckless softwar
