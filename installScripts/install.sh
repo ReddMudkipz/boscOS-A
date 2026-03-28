@@ -39,6 +39,4 @@ sudo make install
 xset +fp /usr/share/fonts/misc/
 
     # Additional packages
-yay -S ranger thunar dolphin zathura vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot stremio
-
-yay -S flatpak
+yay -S ranger thunar dolphin zathura vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot
