@@ -6,11 +6,9 @@
 [[ $- != *i* ]] && return
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$/var/lib/flatpak/exports/bin:$PATH"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-# Flatpack shortcuts
-alias stremio='flatpak run com.stremio.Stremio/ & disown ; exit'
 
 PS1='[\u@\h \W]\$ '
