@@ -38,6 +38,7 @@ cd ~/.dotfiles
 stow .
 rm -rf ~/.config/dunst
 stow dunst
+stow picom
 
 # Compiling suckless softwar
 cd ~/.dotfiles/dwm
