@@ -14,7 +14,7 @@ yay -S firefox alacritty dunst emacs stow openssh
 yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir
 
 # For doom emacs
-yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-lsp-server python-isort python-pipenv python-nose python-pytest shellcheck graphviz ispell
+yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-lsp-server python-isort python-pipenv python-nose python-pytest shellcheck graphviz ispell ripgrep
 
 # Audio
 yay -S alsa pipewire pipewire-pulse alsa-utils playerctl pavucontrol
@@ -28,7 +28,12 @@ yay -S bluez bluez-utils bluetuith
 sudo systemctl enable bluetooth.service
 
 # USB storage devices
-yay -S ntfs-3g
+yay -S ntfs-3g udisks2 udiskie
+
+# For global dark mode
+yay -S gnome-themes-extra gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-git
+sudo rm /etc/environment
+sudo ln -s ~/.dotfiles/etc/environment /etc
 
 # For global dark mode
 yay -S gnome-themes-extra gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-git
