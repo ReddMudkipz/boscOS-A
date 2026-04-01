@@ -14,7 +14,7 @@ yay -S firefox alacritty dunst emacs stow openssh
 yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir
 
 # For doom emacs
-yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-isort python-pipenv python-nose python-pytest shellcheck graphviz ispell
+yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-lsp-server python-isort python-pipenv python-nose python-pytest shellcheck graphviz ispell
 
 # Audio
 yay -S alsa pipewire pipewire-pulse alsa-utils playerctl pavucontrol
@@ -29,6 +29,11 @@ sudo systemctl enable bluetooth.service
 
 # USB storage devices
 yay -S ntfs-3g
+
+# For global dark mode
+yay -S gnome-themes-extra gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-git
+sudo rm /etc/environment
+sudo ln -s ~/.dotfiles/etc/environment /etc
 
 # Populating home directory
 rm ~/.bashrc
@@ -54,4 +59,4 @@ sudo make install
 xset +fp /usr/share/fonts/misc/
 
 # Additional packages
-yay -S ranger thunar dolphin zathura vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot github-cli xbindkeysrc xorg-xinput neofetch kdeconnect ffmpeg pipx
+yay -S ranger thunar zathura vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot github-cli xbindkeysrc xorg-xinput neofetch kdeconnect ffmpeg pipx
