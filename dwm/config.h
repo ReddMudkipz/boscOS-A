@@ -102,6 +102,7 @@ static const char *screenCapture[]  = { "flameshot","gui", NULL };              
 // App launcher
 static const char *emacs[]  = { "emacsclient","-c","-a","''", NULL }; /* opens emacs as client, or starts daemon */
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
+static const char *emote[]  = { "emote", NULL }; /* shows emote window */
 
 // Dmenu
 static const char dmpower[] = "bash $HOME/.dotfiles/dmenu/scripts/dmpower"; /* power options */
@@ -150,7 +151,8 @@ static const Key keys[] = {
 
   // Programs
   { SUPKEY,                       XK_e,      spawn,          {.v = emacs } },  /* opens emacs as client, if not start daemon */
-  { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens emacs as client, if not start daemon */
+  { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
+  { SUPKEY|ShiftMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
 
   // For Sunshine
   { MODKEY|ControlMask|ShiftMask,                       XK_r,      spawn,          {.v = dmenucmd } },       /* open dmenu, for use in sunshine */
