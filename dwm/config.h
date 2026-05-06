@@ -152,7 +152,7 @@ static const Key keys[] = {
   // Programs
   { SUPKEY,                       XK_e,      spawn,          {.v = emacs } },  /* opens emacs as client, if not start daemon */
   { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
-  { SUPKEY|ShiftMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
+  { SUPKEY|ControlMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
 
   // For Sunshine
   { MODKEY|ControlMask|ShiftMask,                       XK_r,      spawn,          {.v = dmenucmd } },       /* open dmenu, for use in sunshine */
