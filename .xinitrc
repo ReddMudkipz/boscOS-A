@@ -1,3 +1,15 @@
+if [ -d "$xinitdir"/xinitrc.d ] ; then
+	for f in "$xinitdir/xinitrc.d"/?*.sh ; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
+fi
+
+export XDG_CURRENT_DESKTOP=GTK
+export XDG_SESSION_TYPE=x11
+
+dbus-update-activation-environment --systemd DISPLAY XAUTHORITY
+
 # Start emacs daemon
 emacs --daemon &
 
