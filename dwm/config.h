@@ -120,8 +120,8 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };                
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };                           /* previous */
 
 // Brightness
-static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };    /* brightness up */
-static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };  /* brightness down */
+static const char *brupcmd[] = { "brightnessctl", "set", "3%+", NULL };    /* brightness up */
+static const char *brdowncmd[] = { "brightnessctl", "set", "3%-", NULL };  /* brightness down */
 
 /* Additional modules */
 #include <X11/XF86keysym.h> /* allows dwm to listen for XF86 keys */
