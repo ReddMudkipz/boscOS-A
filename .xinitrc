@@ -22,6 +22,9 @@ syncthing &
 # Start copyq, clipboard manager
 copyq &
 
+# Start playerctld daemon. Fixes playerctl play-pause issues when multiple media players are open
+playerctld daemon &
+
 # Start flameshot daemon, to copy to clipboard
 flameshot &
 

@@ -25,12 +25,12 @@ static const char col_cyan[]        = "#005577";
 
 static const char *colors[][3]      = {
   /*               fg          bg             border   */
-  [SchemeNorm] = { col_gray3,  col_gray1,     col_black },
+  [SchemeNorm] = { col_gray3,  col_black,     col_black },
   [SchemeSel]  = { col_gray4,  col_burgundy2,  col_burgundy2  },
-  [SchemeUns]  = { col_gray2,  col_gray1,     col_black },
-  [SchemeUnf]  = { col_gray4,  col_gray1,  col_black  },
-  [SchemeHid]  = { col_gray5,  col_gray1,     col_black  },
-  [SchemeInv]  = { col_gray3,  col_gray1,     col_black },
+  [SchemeUns]  = { col_gray2,  col_black,     col_black },
+  [SchemeUnf]  = { col_gray4,  col_black,  col_black  },
+  [SchemeHid]  = { col_gray5,  col_black,     col_black  },
+  [SchemeInv]  = { col_gray3,  col_black,     col_black },
 };
 
 // Layout symbols
@@ -101,6 +101,7 @@ static const char *screenCapture[]  = { "flameshot","gui", NULL };              
 
 // App launcher
 static const char *emacs[]  = { "emacsclient","-c","-a","''", NULL }; /* opens emacs as client, or starts daemon */
+static const char *reddemacs[]  = { "emacs","--init-directory","~/git/reddEmacs", NULL }; /* opens WIP emacs */
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
 static const char *emote[]  = { "emote", NULL }; /* shows emote window */
 
@@ -151,6 +152,7 @@ static const Key keys[] = {
 
   // Programs
   { SUPKEY,                       XK_e,      spawn,          {.v = emacs } },  /* opens emacs as client, if not start daemon */
+  { SUPKEY|ShiftMask,                       XK_e,      spawn,          {.v = reddemacs } },  /* opens WIP emacs */
   { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
   { SUPKEY|ControlMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
 
