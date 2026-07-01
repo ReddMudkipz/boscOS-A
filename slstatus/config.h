@@ -68,23 +68,9 @@ static const char battery[] = "/run/current-system/sw/bin/upower -i /org/freedes
 
 static const struct arg args[] = {
 	/* function format          argument */
-	{cpu_perc, "CPU: %s%% | ",     NULL},
+	{cpu_perc, " CPU: %s%% | ",     NULL},
 	{ram_perc, "RAM: %s%% | ",     NULL},
 	{wifi_essid, "󰖩: %s | ", "wlp3s0"},
 	{battery_perc, ": %s%% | ",     "BAT1"},
 	{datetime, "%s",           "%F %T" },
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
