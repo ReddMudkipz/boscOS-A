@@ -38,4 +38,7 @@ udiskie &
 # Start picom
 picom &
 
-exec dwm
+# allows you to restart dwm
+while :; do
+	ssh-agent dwm
+done

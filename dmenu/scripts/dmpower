@@ -26,7 +26,7 @@ if [ "$choice" == "Lock" ]; then
   slock
 
 elif [ "$choice" == "Suspend" ]; then
-  # slock &
+  slock &
   systemctl suspend
 
 elif [ "$choice" == "Shut Down" ]; then
