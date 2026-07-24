@@ -35,6 +35,9 @@ yay -S gnome-themes-extra gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-gi
 sudo rm /etc/environment
 sudo ln -s ~/.dotfiles/etc/environment /etc
 
+# For Devour, X11 window swallower
+git clone https://github.com/salman-abedin/devour.git && cd devour && sudo make install
+
 # Populating home directory
 rm ~/.bashrc
 rm ~/.xbindkeysrc
