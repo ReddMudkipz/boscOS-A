@@ -102,6 +102,7 @@ static const char *screenCapture[]  = { "flameshot","gui", NULL };              
 // App launcher
 static const char *emacs[]  = { "emacsclient","-c","-a","''", NULL }; /* opens emacs as client, or starts daemon */
 static const char *reddemacs[]  = { "emacs","--init-directory","~/git/reddEmacs", NULL }; /* opens WIP emacs */
+static const char *emacseverywhere[]  = { "doom","+everywhere", NULL }; /* opens emacs everywhere window */
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
 static const char *emote[]  = { "emote", NULL }; /* shows emote window */
 
@@ -152,7 +153,8 @@ static const Key keys[] = {
 
   // Programs
   { SUPKEY,                       XK_e,      spawn,          {.v = emacs } },  /* opens emacs as client, if not start daemon */
-  { SUPKEY|ShiftMask,                       XK_e,      spawn,          {.v = reddemacs } },  /* opens WIP emacs */
+  { SUPKEY|ControlMask,                       XK_e,      spawn,          {.v = reddemacs } },  /* opens WIP emacs */
+  { SUPKEY|ShiftMask,                       XK_e,      spawn,          {.v = emacseverywhere } },  /* opens emacs everywhere */
   { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
   { SUPKEY|ControlMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
 
