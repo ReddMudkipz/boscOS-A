@@ -95,7 +95,7 @@ static const int lockfullscreen = 0;  /* 1, force focus on fullscreen window */
 // Default
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-p", "boscOS:", NULL };  /* dmenu */
-static const char *termcmd[]  = { "alacritty", NULL };                                   /* terminal of choice */
+static const char *termcmd[]  = { "kitty", NULL };                                   /* terminal of choice */
 static const char *slock[]  = { "slock", NULL };                                         /* lock screen */
 static const char *screenCapture[]  = { "flameshot","gui", NULL };                       /* screen capture */
 

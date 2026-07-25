@@ -242,7 +242,7 @@ Aliases for more complicated shell commands. Note that commands and flags can be
 // Default
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-p", "boscOS:", NULL };  /* dmenu */
-static const char *termcmd[]  = { "alacritty", NULL };                                   /* terminal of choice */
+static const char *termcmd[]  = { "kitty", NULL };                                   /* terminal of choice */
 static const char *slock[]  = { "slock", NULL };                                         /* lock screen */
 static const char *screenCapture[]  = { "flameshot","gui", NULL };                       /* screen capture */
 
