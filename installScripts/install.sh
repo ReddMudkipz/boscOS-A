@@ -8,7 +8,7 @@ sudo pacman -Syy
 yay -S htop xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset picom
 
 # basic programs
-yay -S firefox alacritty dunst emacs stow openssh
+yay -S firefox alacritty dunst emacs stow openssh zsh
 
 # fonts and slock compatibility
 yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir emote
@@ -35,18 +35,21 @@ yay -S gnome-themes-extra gnome-themes-extra-gtk2 adwaita-qt5-git adwaita-qt6-gi
 sudo rm /etc/environment
 sudo ln -s ~/.dotfiles/etc/environment /etc
 
-# For Devour, X11 window swallower
-git clone https://github.com/salman-abedin/devour.git && cd devour && sudo make install
-
 # Populating home directory
 rm ~/.bashrc
+rm ~/.zshrc
 rm ~/.xbindkeysrc
 rm ~/.xinitrc
 cd ~/.dotfiles
 stow .
 rm -rf ~/.config/dunst
 stow dunst
+rm -rf ~/.config/picom
 stow picom
+rm -rf ~/.config/kitty
+stow kitty
+rm -rf ~/.config/yazi
+stow yazi
 
 # Compiling suckless softwar
 cd ~/.dotfiles/dwm
@@ -61,5 +64,11 @@ sudo make install
 # For slock text error
 xset +fp /usr/share/fonts/misc/
 
+# For Devour, X11 window swallower
+git clone https://github.com/salman-abedin/devour.git && cd devour && sudo make install
+
 # Additional packages
 yay -S ranger thunar thunar-archive-plugin xarchiver zathura zathura-pdf-mupdf vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot github-cli xbindkeysrc xorg-xinput neofetch kdeconnect ffmpeg pipx
+
+#setup zsh
+chsh -s /usr/bin/zsh

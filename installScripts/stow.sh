@@ -2,6 +2,7 @@
 
 # Populating home directory
 rm ~/.bashrc
+rm ~/.zshrc
 rm ~/.xbindkeysrc
 rm ~/.xinitrc
 cd ~/.dotfiles
