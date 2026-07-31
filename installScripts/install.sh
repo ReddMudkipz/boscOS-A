@@ -8,7 +8,7 @@ sudo pacman -Syy
 yay -S htop xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset picom
 
 # basic programs
-yay -S firefox alacritty dunst emacs stow openssh zsh
+yay -S firefox alacritty dunst emacs stow openssh zsh starship
 
 # fonts and slock compatibility
 yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir emote
@@ -50,6 +50,8 @@ rm -rf ~/.config/kitty
 stow kitty
 rm -rf ~/.config/yazi
 stow yazi
+rm ~/.config/starship.toml
+stow starship
 
 # Compiling suckless softwar
 cd ~/.dotfiles/dwm

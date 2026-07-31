@@ -15,3 +15,5 @@ rm -rf ~/.config/kitty
 stow kitty
 rm -rf ~/.config/yazi
 stow yazi
+rm ~/.config/starship.toml
+stow starship
