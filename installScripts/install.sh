@@ -52,6 +52,8 @@ rm -rf ~/.config/yazi
 stow yazi
 rm ~/.config/starship.toml
 stow starship
+rm ~/.config/mimeapps.list
+stow otherConfigs
 
 # Compiling suckless softwar
 cd ~/.dotfiles/dwm

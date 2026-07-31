@@ -11,7 +11,7 @@ sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
 sort_fallback  = "alphabetical"
-linemode       = "none"
+linemode       = "size"
 show_hidden    = false
 show_symlink   = true
 scrolloff      = 5
@@ -20,10 +20,10 @@ mouse_events   = [ "click", "scroll", "drag" ]
 [preview]
 wrap            = "no"
 tab_size        = 2
-max_width       = 600
-max_height      = 900
+max_width       = 2000
+max_height      = 2000
 cache_dir       = ""
-image_delay     = 30
+image_delay     = 0
 image_filter    = "triangle"
 image_quality   = 75
 ueberzug_scale  = 1
@@ -44,7 +44,7 @@ play = [
 	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
 ]
 open = [
-	{ run = "xdg-open %s1",    desc = "Open", for = "linux" },
+	{ run = "devour xdg-open %s1",    desc = "Open", for = "linux" },
 	{ run = "open %s",         desc = "Open", for = "macos" },
 	{ run = 'start "" %s1',    desc = "Open", for = "windows", orphan = true },
 	{ run = "termux-open %s1", desc = "Open", for = "android" },
@@ -63,6 +63,9 @@ download = [
 	{ run = "ya emit download --open %S", desc = "Download and open" },
 	{ run = "ya emit download %S",        desc = "Download" },
 ]
+pdf = [
+    { run = "devour zathura %s" }
+]
 
 [open]
 rules = [
@@ -74,6 +77,8 @@ rules = [
 	{ mime = "image/*", use = [ "open", "reveal" ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
+    # PDF
+    { mime = "application/pdf", use = [ "pdf" ] },
 	# Code
 	{ mime = "application/{json,ndjson,javascript,wine-extension-ini}", use = [ "edit", "reveal" ] },
 	# Archive
@@ -175,7 +180,7 @@ previewers = [
 ]
 
 [input]
-cursor_blink = false
+cursor_blink = true
 
 # cd
 cd_title  = "Change directory:"

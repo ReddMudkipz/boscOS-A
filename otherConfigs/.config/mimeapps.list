@@ -1,0 +1,14 @@
+[Added Associations]
+video/mp4=vlc-2.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+audio/x-mpegurl=vlc.desktop;
+text/plain=libreoffice-calc.desktop;
+
+[Default Applications]
+video/mp4=vlc-2.desktop;
+image/png=feh.desktop
+image/jpeg=feh.desktop
+application/pdf=org.pwmt.zathura.desktop
+audio/x-mpegurl=vlc.desktop
