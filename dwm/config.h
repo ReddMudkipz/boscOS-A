@@ -192,10 +192,10 @@ static const Key keys[] = {
   // Tile windows \\
 
   // Master
-  { SUPKEY|ShiftMask,                       XK_i,      incnmaster,     {.i = +1 } },  /* increase number of clients in master area */
-  { SUPKEY|ShiftMask,                       XK_u,      incnmaster,     {.i = -1 } },  /* decrease number of clients in master area */
-  { SUPKEY,                       XK_u,      setmfact,       {.f = -0.05} },          /* increase size of master area */
-  { SUPKEY,                       XK_i,      setmfact,       {.f = +0.05} },          /* decrease size of master area */
+  { SUPKEY,                       XK_i,      incnmaster,     {.i = +1 } },  /* increase number of clients in master area */
+  { SUPKEY|ShiftMask,                       XK_i,      incnmaster,     {.i = -1 } },  /* decrease number of clients in master area */
+  { SUPKEY,                       XK_u,      setmfact,       {.f = +0.05} },          /* decrease size of master area */
+  { SUPKEY|ShiftMask,                       XK_u,      setmfact,       {.f = -0.05} },          /* increase size of master area */
   { SUPKEY,                       XK_o, zoom,           {0} },                        /* swap primary window */
 
   // Layout \\
