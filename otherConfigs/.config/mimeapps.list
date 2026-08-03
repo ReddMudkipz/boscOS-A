@@ -4,7 +4,6 @@ image/png=feh.desktop;
 image/jpeg=feh.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 audio/x-mpegurl=vlc.desktop;
-text/plain=libreoffice-calc.desktop;
 
 [Default Applications]
 video/mp4=vlc-2.desktop;
@@ -17,3 +16,5 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop
 application/xhtml+xml=firefox.desktop
+text/csv=libreoffice-calc.desktop;
+text/x-csv=libreoffice-calc.desktop;
