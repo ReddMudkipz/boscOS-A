@@ -32,6 +32,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 [opener]
 edit = [
 	{ run = "${EDITOR:-vi} %s", desc = "$EDITOR",      for = "unix", block = true },
+	{ run = "devour emacsclient %s", desc = "Emacs",      for = "unix", block = true },
 	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
 	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
 ]
@@ -69,6 +70,9 @@ pdf = [
 spreadsheet = [
   { run = 'devour libreoffice %s', desc = "Open with LibreOffice", block = false, for = "unix" }
 ]
+paint = [
+  { run = 'devour kolourpaint %s', desc = "Open with KolourPaint"  }
+]
 
 [open]
 rules = [
@@ -79,7 +83,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = [ "open", "reveal", "paint" ] },
 	# Media
 	{ mime = "{audio,video}/*", use = [ "play", "reveal" ] },
     # PDF
