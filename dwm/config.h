@@ -106,6 +106,7 @@ static const char *emacseverywhere[]  = { "doom","+everywhere", NULL }; /* opens
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
 static const char *emote[]  = { "emote", NULL }; /* shows emote window */
 static const char *yazi[] = { "kitty", "-e", "yazi", NULL}; /* opens yazi */
+static const char *calculator[] = { "kitty", "-e", "bc", NULL}; /* opens bc, basic calculator */
 
 // Dmenu
 static const char dmpower[] = "bash $HOME/.dotfiles/dmenu/scripts/dmpower"; /* power options */
@@ -159,6 +160,7 @@ static const Key keys[] = {
   { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
   { SUPKEY|ControlMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
   { SUPKEY, XK_y, spawn, {.v = yazi}}, /* opens yazi */
+  { SUPKEY, XK_c, spawn, {.v = calculator}}, /* opens bc, basic calculator */
 
   // For Sunshine
   { MODKEY|ControlMask|ShiftMask,                       XK_r,      spawn,          {.v = dmenucmd } },       /* open dmenu, for use in sunshine */

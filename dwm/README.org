@@ -85,7 +85,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_gray5[]       = "#151515";
-static const char col_black[]       = "#000000";
+satic const char col_black[]       = "#000000";
 static const char col_burgundy[]    = "#a93226";
 static const char col_burgundy2[]    = "#800020";
 static const char col_burgundy3[]    = "#34000d";
@@ -253,6 +253,7 @@ static const char *emacseverywhere[]  = { "doom","+everywhere", NULL }; /* opens
 static const char *copyq[]  = { "copyq","menu", NULL }; /* shows copyq window */
 static const char *emote[]  = { "emote", NULL }; /* shows emote window */
 static const char *yazi[] = { "kitty", "-e", "yazi", NULL}; /* opens yazi */
+static const char *calculator[] = { "kitty", "-e", "bc", NULL}; /* opens bc, basic calculator */
 
 // Dmenu
 static const char dmpower[] = "bash $HOME/.dotfiles/dmenu/scripts/dmpower"; /* power options */
@@ -320,6 +321,7 @@ static const Key keys[] = {
   { SUPKEY,                       XK_v,      spawn,          {.v = copyq } },  /* opens copyq windw */
   { SUPKEY|ControlMask,                       XK_period,      spawn,          {.v = emote } },  /* opens emote window */
   { SUPKEY, XK_y, spawn, {.v = yazi}}, /* opens yazi */
+  { SUPKEY, XK_c, spawn, {.v = calculator}}, /* opens bc, basic calculator */
 #+end_src
 *** Sunshine shortcuts
 In the Sunshine applications, we are able to use shortcuts that uses the Gui key. This is the workaround.
