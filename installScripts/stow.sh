@@ -18,4 +18,5 @@ stow yazi
 rm ~/.config/starship.toml
 stow starship
 rm ~/.config/mimeapps.list
+rm ~/.config/copyq/copyq.conf
 stow otherConfigs
