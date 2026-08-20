@@ -1,7 +1,7 @@
 #!/bin/sh
 xset s off -dpms & # Disaables screen blanking
 
-xsetroot -solid black & # Sets backgroun to black. Fixes afterimage issue when moving windows
+xsetroot -solid black & # Sets background to black. Fixes afterimage issue when moving windows
 
 # Status bar
 slstatus &

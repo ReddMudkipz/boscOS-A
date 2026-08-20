@@ -32,6 +32,9 @@ flameshot &
 xrandr --output DP-3 --left-of DP-1
 xrandr --output DP-2 --rotate right
 
+# Set background. For home three monitor setup
+feh --bg-fill ~/.dotfiles/wallpapers/gridWallpaper.png ~/.dotfiles/wallpapers/gridWallpaperVert.png ~/.dotfiles/wallpapers/gridWallpaper.png
+
 # For automounting usb-devices
 udiskie &
 
