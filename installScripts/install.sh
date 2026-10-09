@@ -11,10 +11,13 @@ yay -S htop xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset picom
 yay -S firefox alacritty dunst emacs stow openssh zsh starship
 
 # fonts and slock compatibility
-yay -S nerd-fonts ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir emote
+yay -S ttf-jetbrains-mono-nerd ttf-ms-fonts ttf-fira-code xorg-fonts-misc xorg-mkfontscale xorg-mkfontdir emote
 
 # For doom emacs
 yay -S ttf-symbola fd npm discount nix nixfmt xclip maim python-lsp-server python-isort python-pipenv python-nose python-pytest shellcheck graphviz ispell ripgrep
+
+# For org to pdf
+sudo pacman -S texlive-basic texlive-bin texlive-latex texlive-latexrecommended texlive-latexextra texlive-fontsextra texlive-plaingeneric
 
 # Audio
 yay -S alsa pipewire pipewire-pulse alsa-utils playerctl pavucontrol
@@ -72,7 +75,7 @@ xset +fp /usr/share/fonts/misc/
 git clone https://github.com/salman-abedin/devour.git && cd devour && sudo make install
 
 # Additional packages
-yay -S ranger thunar thunar-archive-plugin xarchiver zathura zathura-pdf-mupdf vlc vlc-plugins-all qimgv bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot github-cli xbindkeysrc xorg-xinput neofetch kdeconnect ffmpeg pipx
+yay -S ranger thunar thunar-archive-plugin gvfs xarchiver zathura zathura-pdf-mupdf vlc vlc-plugins-all feh imagemagick bc flameshot bitwarden discord libreoffice-still kolourpaint copyq kvirc godot github-cli xbindkeysrc xorg-xinput neofetch kdeconnect ffmpeg pipx
 
 #setup zsh
 chsh -s /usr/bin/zsh
